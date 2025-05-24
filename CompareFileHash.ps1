@@ -30,11 +30,11 @@ param(
 $ComputedHash = Get-FileHash $FilePath -Algorithm $Algorithm
 
 if ( $ComputedHash.Hash -ieq $ExpectedHash) {
-	Write-Host "SUCCESS: Hashes match." -ForegroundColor Green
+    Write-Host "SUCCESS: Hashes match." -ForegroundColor Green
     Write-Host "Computed hash: $($ComputedHash.Hash)"
     Write-Host "Expected hash: $ExpectedHash"
 } else {
-	Write-Host "FAILURE: Hash mismatch." -ForegroundColor Red
+    Write-Host "FAILURE: Hash mismatch." -ForegroundColor Red
     Write-Host "Computed hash: $($ComputedHash.Hash)"
     Write-Host "Expected hash: $ExpectedHash"
 }
